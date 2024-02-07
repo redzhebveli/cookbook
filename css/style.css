@@ -1,0 +1,29 @@
+:root{
+    --hellblau: #e4f3ff;
+    --weiss: #ffffff;
+    --schwarz: #090909;
+  }
+  
+html{
+    height: 100%;
+}
+
+body{
+    background-color: #927f55;
+    color: var(--schwarz);
+    height: 100%;
+}
+
+h1, h2, h3{
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.bg-weiss{
+    background-color: var(--weiss);
+  }
+  .bg-hellblau{
+    background-color: var(--hellblau);
+  }
+  
+
