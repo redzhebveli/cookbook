@@ -19,3 +19,12 @@ nav {
 h1, h2 { 
 	font-family: Bodoni MT,Didot,Didot LT STD,Hoefler Text,Garamond,Times New Roman,serif; 
 }
+
+.bg-weiss{
+    background-color: var(--weiss);
+  }
+  
+.bg-hellblau{
+    background-color: var(--hellblau);
+  }
+     
