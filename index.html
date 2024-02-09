@@ -11,27 +11,6 @@
 <body class="bg-black">
 
     <script>
-        document.addEventListener("DOMContentLoaded", (event) => {
-          let toggler = document.querySelectorAll("[data-toggle-target]")
-        
-          if (toggler) {
-            toggler.forEach(function (element) {
-              let target = element.getAttribute("data-toggle-target")
-              let allTargets = document.querySelectorAll('.subMenu')
-              let targets = document.querySelectorAll(target)
-              let toggleClass = element.getAttribute("data-toggle-class")
-        
-              element.addEventListener("click", (event) => {
-                allTargets.forEach(function (e) {
-                  e.classList.remove(toggleClass)
-                })
-                targets.forEach(function (e) {
-                  e.classList.add(toggleClass)
-                })
-              })
-            })
-          }
-        });
         </script>
         
         
@@ -55,7 +34,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="subMenu bg-primary px-0 noWidth position-absolute" id="home-collapse">
+                                        <div class="subMenu bg-primary allTargetsButTarget px-0 noWidth position-absolute" id="home-collapse">
                                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" >
                                               <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overviewd</a></li>
                                               <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
