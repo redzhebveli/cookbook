@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Nunito&family=Rock+Salt&display=swap');
+
+body {
+	font-family: 'Nunito', sans-serif;
+}
+.Titel-Kochideen {
+        font-family: 'Rock Salt', cursive;
+        font-size: 4em;
+        color: #0A50BA;
+        display: inline-block;
+        margin-top: 35px;
+}
+
+nav {
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1, h2 { 
+	font-family: Bodoni MT,Didot,Didot LT STD,Hoefler Text,Garamond,Times New Roman,serif; 
+}
