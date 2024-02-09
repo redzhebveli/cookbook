@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Nunito&family=Rock+Salt&display=swap');
+
+:root{
+    --hellblau: #e4f3ff;
+    --weiss: #ffffff;
+    --schwarz: #090909;
+  }
+  
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: #927f55;
+    color: var(--schwarz);
+    height: 100%;
+}
+
+/* .Titel-Kochideen {
+    font-family: 'Rock Salt', cursive;
+    font-size: 4em;
+    color: #0A50BA;
+}
+
+
+div.K {
+font-family: 'Rock Salt', cursive;
+font-size: 15em;
+color: #0A50BA; 
+margin: 0 auto;
+padding: 300px;
+width: 1000px;
+height: 1000px;
+background: rgb(191, 219, 248);
+} */
+
+h1, h2, h3{
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Bodoni MT,Didot,Didot LT STD,Hoefler Text,Garamond,Times New Roman,serif; 
+}
+
+h1.bg-hellblau {
+  font-family: 'Rock Salt', cursive;
+  color: #0A50BA; 
+}
+
+.bg-weiss{
+  background-color: var(--weiss);
+}
+
+.bg-hellblau{
+  background-color: var(--hellblau);
+}
+   
