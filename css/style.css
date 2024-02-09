@@ -17,6 +17,85 @@ body{
     height: 100%;
 }
 
+h1, h2, h3{
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.bg-weiss{
+    background-color: var(--weiss);
+  }
+  .bg-hellblau{
+    background-color: var(--hellblau);
+  }
+   
+
+
+
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+  .Titel-Kochideen {
+          font-family: 'Rock Salt', cursive;
+          font-size: 4em;
+          color: #0A50BA;
+          display: inline-block;
+          line-height: 1;
+          
+  }
+  
+  nav {
+      text-transform: uppercase;
+      font-family: 'Noto Sans', sans-serif;
+  }
+  
+  h1, h2 { 
+    font-family: Bodoni MT,Didot,Didot LT STD,Hoefler Text,Garamond,Times New Roman,serif; 
+  }
+
+
+
+
+  
+.collapsing  { 
+  /* height: 0 !important;  */
+  /* overflow: hidden !important;  */
+  transition: width 0.1s ease !important; 
+  /* transition-timing-function: cubic-bezier(0.860, 0.000, 0.660, 0.965); */
+}
+
+.noWidth { 
+  transition: width 0.25s ease !important; 
+  width: 0px;
+  overflow: hidden;
+}
+
+.subMenu{
+  top: 0px;
+  left: calc(100% - 25px);
+  
+}
+
+.collapse-horizontal:not(.show)
+  {
+    /* display: none; */
+  }
+
+.active .nav-indicator
+{
+  width: 4rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240/var(--tw-bg-opacity));
+}
+.navigation a{
+  width: 100px;
+}
+.myCollapse {
+  display: inherit;
+  width: 100px;
+  height: 100%;
+}
 /* .Titel-Kochideen {
     font-family: 'Rock Salt', cursive;
     font-size: 4em;
