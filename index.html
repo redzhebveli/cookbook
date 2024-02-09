@@ -8,9 +8,33 @@
     
     <title>Document</title>
 </head>
-<body class="bg-weiss">
+<body class="bg-black">
 
-
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+          let toggler = document.querySelectorAll("[data-toggle-target]")
+        
+          if (toggler) {
+            toggler.forEach(function (element) {
+              let target = element.getAttribute("data-toggle-target")
+              let allTargets = document.querySelectorAll('.subMenu')
+              let targets = document.querySelectorAll(target)
+              let toggleClass = element.getAttribute("data-toggle-class")
+        
+              element.addEventListener("click", (event) => {
+                allTargets.forEach(function (e) {
+                  e.classList.remove(toggleClass)
+                })
+                targets.forEach(function (e) {
+                  e.classList.add(toggleClass)
+                })
+              })
+            })
+          }
+        });
+        </script>
+        
+        
 
 
     <div class="container-fluid d-flex justify-content-center h-100">
@@ -18,69 +42,105 @@
             <div class="col w-100 h-100">
                 <div class="container-xxl h-100">
                     <div class="row h-100">
-                        <div class="col-1 bg-weiss">
+                        <div class="col-2 bg-weiss d-flex flex-column justify-content-start">
                             <div class="logo"><img src="assets/logo.png" alt="" srcset="" class="img-fluid"></div>
-                            <div class="menu">
-                                
-                            </div>
+                            <div class="menu h-100">
+                                <div class="row  h-100 column-gap-3 w-100">
+                                    <div class="col  h-100 position-relative">
+                                        <div class="row gap-0 h-100 w-100 d-flex flex-nowrap">
+                                            <div class="col  ">
+                                                <div class="d-flex flex-column">
+                                                    <div class="col" data-toggle-class="myCollapse" data-toggle-target="#home-collapse"><p>Menu 1</p></div>
+                                                    <div class="col" data-toggle-class="myCollapse" data-toggle-target="#pizza-collapse"><p>Menu 2</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="subMenu bg-primary px-0 noWidth position-absolute" id="home-collapse">
+                                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" >
+                                              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overviewd</a></li>
+                                              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
+                                              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
+                                          </ul>
+                                        </div>
+                                        <div class="subMenu  bg-secondary px-0 noWidth position-absolute" id="pizza-collapse">
+                                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" >
+                                              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">ergerg rgewrg</a></li>
+                                              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">ergre rgwr </a></li>
+                                              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">wergh3rh wregwer ewe</a></li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
                         </div>
-                        <div class="col">
-                            <div class="row p-4">
-                                <div class="col py-5">
-                                    <h1 class="bg-hellblau">Kochideen</h1>
-                                </div>
-                            </div>
-                            <div class="row p-4">
-                                <div class="col bg-weiss py-5">
-                                    <div class="row">
-                                        <div class="col-md-6 lead">
-                                            <h2 class="bg-hellblau">Pasta mit Spinat</h2>
-                                            <p>weil es schmecken daad.</p>
-                                            <p>Possimus libero cupiditate sit vel recusandae.</p>
-                                            <p>Schwierigkeit: **</p>
-                                            <p>Zubereitungszeit: 30min</p>
-                                            <p>Vorbereitung: 30min</p>
-                                            <p>Kochzei: 20min</p>
+                        <div class="col bg-hellblau">
+
+                            <div class=" ">
+                                <div class="col bg-weiss mx-2 px-2">
+
+
+                                    <div class="row p-4">
+                                        <div class="col py-5">
+                                            <span class="bg-hellblau Titel-Kochideen px-4 py-2 rounded-4">Kochideen</span>
                                         </div>
-                                        <div class="col-md-6"> <img class="img-fluid" src="https://source.unsplash.com/gekochtes-gericht-auf-grauer-schussel--YHSwy6uqvk" alt="" ></div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row p-4">
-                                <div class="col py-5">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-4">
+                                    <div class="row p-4">
+                                        <div class="col bg-weiss py-5">
                                             <div class="row">
-                                                <div class="col">
-                                                    <h3 class="bg-hellblau">Zutaten</h3>
-                                                    <ul>
-                                                        <li>Zutat</li>
-                                                        <li>Zutat</li>
-                                                        <li>Zutat</li>
-                                                        <li>Zutat</li>
-                                                        <li>Zutat</li>
-                                                        <li>Zutat</li>
-                                                    </ul>
+                                                <div class="col-md-6 lead">
+                                                    <h2 class="bg-hellblau">Pasta mit Spinat</h2>
+                                                    <p>weil es schmecken daad.</p>
+                                                    <p>Possimus libero cupiditate sit vel recusandae.</p>
+                                                    <p>Schwierigkeit: **</p>
+                                                    <p>Zubereitungszeit: 30min</p>
+                                                    <p>Vorbereitung: 30min</p>
+                                                    <p>Kochzei: 20min</p>
+                                                </div>
+                                                <div class="col-md-6"> <img class="img-fluid" src="https://source.unsplash.com/gekochtes-gericht-auf-grauer-schussel--YHSwy6uqvk" alt="" ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row p-4">
+                                        <div class="col py-5">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-4">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h3 class="bg-hellblau">Zutaten</h3>
+                                                            <ul>
+                                                                <li>Zutat</li>
+                                                                <li>Zutat</li>
+                                                                <li>Zutat</li>
+                                                                <li>Zutat</li>
+                                                                <li>Zutat</li>
+                                                                <li>Zutat</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-8">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h3 class="bg-hellblau">Zubereitung</h3>
+                                                            <ol>
+                                                                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, ad?</li>
+                                                                <li>Quas quidem sint cumque nam non soluta deserunt sequi similique?</li>
+                                                                <li>Totam optio ipsum dignissimos eveniet vel ad placeat modi repudiandae?</li>
+                                                                <li>Quae facere quas numquam ipsam earum iure ex repellendus excepturi!</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-8">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h3 class="bg-hellblau">Zubereitung</h3>
-                                                    <ol>
-                                                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, ad?</li>
-                                                        <li>Quas quidem sint cumque nam non soluta deserunt sequi similique?</li>
-                                                        <li>Totam optio ipsum dignissimos eveniet vel ad placeat modi repudiandae?</li>
-                                                        <li>Quae facere quas numquam ipsam earum iure ex repellendus excepturi!</li>
-                                                    </ol>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col"></div>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                     
