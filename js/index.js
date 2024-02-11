@@ -12,12 +12,8 @@
 
           const allTargetsButTarget = Array.from( allTargets ).filter( ( node, index ) => !targets.includes(node))
 
-
           allTargetsButTarget.forEach(function (e) {
-            console.log('allTargetsButTarget',e.classList);
-            console.log('allTargetsButTarget',e );
             e.classList.remove(toggleClass)
-            console.log('allTargetsButTarget',e.classList);
           })
           targets.forEach(function (e) {
             e.classList.toggle(toggleClass)
@@ -25,11 +21,11 @@
         })
         })
       })
-    }
     const getPage = ((page) => {
       const path = 'rezepte/ajax/';
       let response =  fetch(path + page).then(response => response.text()).then(data => {
         document.getElementById('ajaxHere').innerHTML = data;
+        
         return data 
       }
       );
@@ -44,6 +40,13 @@
         event.preventDefault();
         const page = element.getAttribute('href') 
         getPage(page);
+        const allTargets = document.querySelectorAll('.subMenu')
+        allTargets.forEach((e) => {
+          console.log(e.classList)
+          e.classList.remove('myCollapse')
+        }
+        );
+
 
         // const myAsync = async () => {
         //   const newPageHtml = await newPage;
@@ -62,6 +65,8 @@
       })
     }
     );
+
+  }
 
   // let text =  response.text(); // read response body as text
   // console.log(response.then(response => response.text()));
