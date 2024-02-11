@@ -2,8 +2,11 @@
 
 :root{
     --hellblau: #e4f3ff;
+    --blau: #1971c2;
+    --blauAlpha: #7da2c4e8;
     --weiss: #ffffff;
     --schwarz: #090909;
+    --bs-emphasis-color-rgb: 00, 00, 00;
   }
   
 html{
@@ -12,7 +15,7 @@ html{
 
 body{
     font-family: 'Nunito', sans-serif;
-    background-color: #927f55;
+    background-color: #d6d4d0;
     color: var(--schwarz);
     height: 100%;
 }
@@ -28,6 +31,9 @@ h1, h2, h3{
   .bg-hellblau{
     background-color: var(--hellblau);
   }
+  .bg-blau{
+    background-color: var(--blauAlpha);
+  }
    
 
 
@@ -39,7 +45,7 @@ h1, h2, h3{
   .Titel-Kochideen {
           font-family: 'Rock Salt', cursive;
           font-size: 4em;
-          color: #0A50BA;
+          color: #1971c2;
           display: inline-block;
           line-height: 1;
           
@@ -72,9 +78,32 @@ h1, h2, h3{
 }
 
 .subMenu{
-  top: 0px;
+  top: 33px;
   left: calc(100% - 25px);
   
+}
+/* #1971c2  #0A50BA  33 80 125 171 */
+
+.subMenu#maindish-collapse{
+  top: 80px;
+
+}
+.subMenu#snacks-collapse{
+  top: 125px;
+
+}
+.subMenu#desserts-collapse{
+  top: 171px;
+
+}
+
+.subMenu ul{
+  font-size: 18px;
+  line-height: 1.5;
+}
+.subMenu ul li{
+  font-size: 18px;
+  padding-bottom: 1em;
 }
 
 .collapse-horizontal:not(.show)
@@ -93,8 +122,9 @@ h1, h2, h3{
 }
 .myCollapse {
   display: inherit;
-  width: 100px;
-  height: 100%;
+  width: 250px;
+  /* height: 100%; */
+  opacity: 1;
 }
 /* .Titel-Kochideen {
     font-family: 'Rock Salt', cursive;
@@ -122,7 +152,7 @@ h1, h2, h3{
 
 h1.bg-hellblau {
   font-family: 'Rock Salt', cursive;
-  color: #0A50BA; 
+  color: #1971c2; 
 }
 
 .bg-weiss{
@@ -133,3 +163,35 @@ h1.bg-hellblau {
   background-color: var(--hellblau);
 }
    
+
+[data-toggle-class] {
+  cursor: pointer;
+}
+
+[data-toggle-class] p {
+  font-size: 20px;
+}
+
+
+/* #1971c2  #0A50BA  33 80 125 171 */
+
+img.specialSize {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+  object-position: center center;
+}
+
+img.specialSize.specialSizeTop {
+  object-position: top center;
+}
+
+.link-body-emphasis:hover, .link-body-emphasis:focus {
+  color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-opacity, 0.5)) !important;
+}
+.subMenu .link-body-emphasis:hover, .link-body-emphasis:focus {
+  color: RGBA(255, 255, 255, var(--bs-link-opacity, 1)) !important;
+}
+
